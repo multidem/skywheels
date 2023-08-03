@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap');
+
+:root {
+    --mainWidth: 1440px;
+    --color0: #ffffff;
+    --color1: #F97F27;  /* основной */
+    --color2: #FA6E42;  /* дополнительный */
+    --color3: #457282;  /* для текста */
+    --color4: #D9D9D9;  /* разделительная линия*/
+
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+a {
+    transition: .3s;
+}
+
+
+
+
+/* Заголовок */
+
+.header,
+.header__nav,
+.header__login {
+    /* border: 1px solid teal; */
+    display: flex;
+}
+
+.header {
+    max-width: var(--mainWidth);
+    height: 105px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__nav,
+.header__login {
+    font-size: 20px;
+}
+
+.header__nav {
+    width: 409px; /* работает как max-width */
+    justify-content: space-between;
+}
+
+.header__login {
+    font-weight: 600;
+    width: 292px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__login a:last-child {
+    width: 191px;
+    height: 60px;
+    border: 2px solid var(--color1);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__nav a:last-child {
+    color: var(--color2);
+    font-weight: 600;
+}
+
+.header a:hover {
+    color: var(--color1);
+}
+
+.header__login a:last-child:hover {
+    background: var(--color1);
+    color: var(--color0);
+}
+
+.header__nav-mobile {
+    display: none;
+}
+
+
+
+
+
+/* Главный блок */
+
+/* .main,
+.main-container,
+.main-content,
+.main-content__buttons,
+.main-content__ellipse {
+    border: 1px solid teal;
+} */
+
+.main {
+    max-width: var(--mainWidth);
+    margin: auto;
+    /* height: 5000px; */
+}
+
+.main-container {
+    max-width: var(--mainWidth);
+    height: 915px;
+    background: url(../assets/images/copter1440.svg);
+}
+
+.main-content {
+    max-width: 1295px;
+    height: 700px;
+    margin: 100px 0 0 95px;
+}
+
+
+.main-content__header {
+    max-width: 713px;
+    height: 561px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.main-content__h1 {
+    font-size: 72px; 
+    font-weight: 300; /* 400 много*/
+    line-height: 94px;
+    color: var(--color3);
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* mix-blend-mode: multiply; */
+    z-index: 1;
+}
+
+.main-content__text {
+    width: 569px;
+    line-height: 24px;
+}
+
+.main-content__buttons {
+    width: 406.87px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content__buttons a {
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content__buttons a:first-child {
+    width: 223px;
+    height: 60px;
+    background: var(--color1);
+    color: var(--color0);
+    border-radius: 24px;
+}
+
+.main-content__buttons a:last-child {
+    width: 153.87px;
+    height: 60px;
+    border: 3px solid var(--color2);
+    border-radius: 24px;
+    color: var(--color2);
+}
+
+.main-content__buttons a:first-child:hover {
+    background: var(--color2);
+}
+
+.main-content__buttons a:last-child:hover {
+    background: var(--color2);
+    color: var(--color0);
+}
+
+.main-content__ellipse {
+    margin-top: -561px;
+    margin-left: 595px;
+}
+
+
+
+
+/* Разделитель */
+
+.devider {
+    max-width: var(--mainWidth);
+    height: 229px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.devider__line {
+    width: 1000px;
+    height: 1px;
+    background: var(--color4);
+}
+
+
+
+
+
+
+
+
+/* iPad Pro 11" */
+/* ширина устройства - 834px, делаем больше, на 890px */
+@media (max-width: 890px) {
+
+    /* Заголовок */
+
+    .header__nav,
+    .header__login {
+        display: none;
+    }
+
+    .header__nav-mobile {
+        display: block;
+        padding: 0 41px;
+    }
+
+
+
+
+
+    /* Главный блок */
+
+    :root {
+        --mainWidth: 834px;
+    }
+
+    .main {
+        max-width: var(--mainWidth);
+        margin: auto;
+        /* height: 5000px; */
+    }
+
+    .main-container {
+        max-width: var(--mainWidth);
+        margin: auto;
+        height: 530px;
+        background: url(../assets/images/copter834.svg);
+    }
+
+    .main-content {
+        max-width: 729px;
+        height: 421px;
+        margin: 74px 0 0 71px;
+    }
+
+
+    .main-content__header {
+        max-width: 397px;
+        height: 421px;
+    }
+
+    .main-content__h1 {
+        font-size: 40px;
+        font-weight: 300; 
+        line-height: 60px;
+        color: var(--color3);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .main-content__text {
+        width: 341px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .main-content__buttons {
+        width: 307px;
+    }
+
+    .main-content__buttons a {
+        font-size: 16px;
+    }
+
+    .main-content__buttons a:first-child {
+        width: 170px;
+        height: 50px;
+    }
+
+    .main-content__buttons a:last-child {
+        width: 115px;
+        height: 50px;
+    }
+
+    .main-content__ellipse {
+        margin-top: -396px;
+        margin-left: 353px;
+    }
+
+
+
+
+
+    /* Разделитель */
+
+    .devider {
+        max-width: var(--mainWidth);
+        height: 149px;
+    }
+
+    .devider__line {
+        width: 600px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+/* iPhone 14" */
+/* ширина устройства - 390px, делаем больше, на 550px */
+@media (max-width: 550px) {
+
+
+    /* Заголовок */
+
+    .header__logo img {
+        width: 205px; /*путем подбора*/
+    }
+
+
+
+
+    /* Главный блок */
+
+    :root {
+        --mainWidth: 390px;
+    }
+
+    .main {
+        max-width: var(--mainWidth);
+        margin: auto;
+
+    }
+
+    .main-container {
+        max-width: var(--mainWidth);
+        margin: auto;
+        height: 365px;
+        background: url(../assets/images/copter390.svg);
+    }
+
+    .main-content {
+        max-width: 352px;
+        height: 282px;
+        margin: 38px 0 0 27px;
+    }
+
+
+    .main-content__header {
+        max-width: 352px;
+        height: 282px;
+    }
+
+    .main-content__h1 {
+        max-width: 238px;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 36px;
+        color: var(--color3);
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    }
+
+    .main-content__text {
+        max-width: 160px;
+        font-size: 10px;
+        line-height: 15px;
+    }
+
+    .main-content__buttons {
+        max-width: 192px;
+        margin-top: -45px;
+        margin-left: 155px;
+    }
+
+    .main-content__buttons a {
+        font-size: 10px;
+    }
+
+    .main-content__buttons a:first-child {
+        max-width: 100px;
+        height: 32px;
+    }
+
+    .main-content__buttons a:last-child {
+        max-width: 88px;
+        height: 32px;
+    }
+
+    .main-content__ellipse {
+        max-width: 192px;
+        margin-top: -253px;
+        margin-left: 154px;
+    }
+
+
+
+    /* Разделитель */
+
+    .devider {
+        max-width: var(--mainWidth);
+        height: 49px;
+    }
+
+    .devider__line {
+        width: 250px;
+    }
+
+}
+
